@@ -31,10 +31,11 @@ try:
   if not fruit_chice:
       streamlit.error("please select a fruit to get information.")
   else:
-      back_form_function = get_fruityvice_data(fruit_choice)
+      back_from_function = get_fruityvice_data(fruit_choice)
       stream.dataframe(back_from_function)
 
 streamlit.stop()
+
 #import snowflake.connector
 my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
 my_cur = my_cnx.cursor()
